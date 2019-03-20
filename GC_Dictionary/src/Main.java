@@ -1,15 +1,15 @@
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
-import java.util.Scanner;
-import java.util.TreeSet;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class Main {
     private static TwoWayDictionary _dictionary = new TwoWayDictionary();
     private static Language _language = Language.ENGLISH;
     private static TreeSet<String> _favorites = new TreeSet<>();
     private static RunningState _runningState = RunningState.INIT;
+    private static History _history = new History();
 
     private static void createFile(String filePath) throws IOException {
         File file = new File(filePath);
@@ -21,6 +21,7 @@ public class Main {
     private static void loadData() {
         try {
             _dictionary.loadData("dictionary.xml");
+            _history.loadFromFile("history.dat");
 
             createFile("favorites.dat");
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("favorites.dat"));
@@ -34,6 +35,7 @@ public class Main {
     }
 
     private static void saveData() {
+        _history.saveToFile("history.dat");
         try {
             ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("favorites.dat"));
             out.writeObject(_favorites);
@@ -165,10 +167,64 @@ public class Main {
         if (!isFavorite(input)) {
             System.out.print("Từ \"" + input + "\" chưa có trong danh sách yêu thích, bạn có muốn thêm vào? (Y/n): ");
             Scanner sc = new Scanner(System.in);
-            if (!sc.nextLine().equals("N") && !sc.nextLine().equals("n")) {
+            String s = sc.nextLine();
+            if (!s.equals("N") && !s.equals("n")) {
                 markFavorite(input);
                 System.out.println("Thêm vào yêu thích thành công");
             }
+        }
+
+        _history.addRecord(input);
+    }
+
+    private static void Statistics() {
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        Date from = null, to = null;
+        boolean valid = false;
+        HashMap<String, Integer> req = null;
+        while (!valid) {
+            try {
+
+                from = formatter.parse(getInput("Vui lòng nhập ngày bắt đầu (dd/MM/yyyy): "));
+                valid = true;
+
+            } catch (ParseException ignored) {
+                System.out.println("Ngày bắt đầu không hợp lệ");
+            }
+        }
+
+        valid = false;
+        while (!valid) {
+            try {
+
+                to = formatter.parse(getInput("Vui lòng nhập ngày kết thúc (dd/MM/yyyy): "));
+                if (from.before(to)) {
+                    valid = true;
+                } else {
+                    System.out.println("Vui lòng nhập ngày kết thúc lớn hơn ngày bắt đầu");
+                }
+
+            } catch (ParseException ignored) {
+                System.out.println("Ngày kết thúc không hợp lệ");
+            }
+        }
+
+        req = _history.getFrequencyInPeriod(from, to);
+        
+        if (req.size() == 0) {
+            System.out.println("Bạn chưa tra cứu từ nào trong khoảng thời gian đã nhập");
+        } else {
+            String leftAlignFormat = "| %-15s | %-6d |%n";
+
+            System.out.format("+-----------------+--------+%n");
+            System.out.format("|        Từ       | Tần số |%n");
+            System.out.format("+-----------------+--------+%n");
+
+            for (Map.Entry<String, Integer> lookupRecord : req.entrySet()) {
+                System.out.format(leftAlignFormat, lookupRecord.getKey(), lookupRecord.getValue());
+            }
+
+            System.out.format("+-----------------+--------+%n");
         }
     }
 
@@ -177,10 +233,11 @@ public class Main {
         System.out.println("1. Cài đặt ngôn ngữ tra cứu.");
         System.out.println("2. Tra cứu nghĩa của từ.");
         System.out.println("3. Hiển thị danh sách yêu thích.");
+        System.out.println("4. Thống kê từ đã tra.");
         System.out.println("0. Thoát");
         System.out.print("Lựa chọn của bạn: ");
 
-        int key = getInputWithValidated(3);
+        int key = getInputWithValidated(4);
 
         switch (key) {
             case 1:
@@ -191,6 +248,9 @@ public class Main {
                 break;
             case 3:
                 printFavorite();
+                break;
+            case 4:
+                Statistics();
                 break;
             case 0:
                 _runningState = RunningState.EXIT;

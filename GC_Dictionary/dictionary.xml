@@ -1,20 +1,210 @@
 <dictionary>
-	<word>
-		<english>hello</english>
-		<vietnamese>Xin chao</vietnamese>
-		<vietnamese>Chao</vietnamese>
-	</word>
-	<word>
-		<english>hi</english>
-		<vietnamese>Xin chao</vietnamese>
-		<vietnamese>Chao</vietnamese>
-	</word>
-	<word>
-		<english>school</english>
-		<vietnamese>Truong Hoc</vietnamese>
-	</word>
-	<word>
-		<english>student</english>
-		<vietnamese>Hoc Sinh</vietnamese>
-	</word>
+    <word>
+        <english>Ability</english>
+        <vietnamese>Khả năng</vietnamese>
+        <vietnamese>Năng lực</vietnamese>
+    </word>
+    <word>
+        <english>Able</english>
+        <vietnamese>Có năng lực</vietnamese>
+        <vietnamese>Có tài</vietnamese>
+    </word>
+    <word>
+        <english>About</english>
+        <vietnamese>Khoảng</vietnamese>
+        <vietnamese>Về</vietnamese>
+    </word>
+    <word>
+        <english>Accident</english>
+        <vietnamese>Tai nạn</vietnamese>
+        <vietnamese>Rủi ro</vietnamese>
+    </word>
+    <word>
+        <english>Believe</english>
+        <vietnamese>Tin</vietnamese>
+        <vietnamese>Tin tưởng</vietnamese>
+    </word>
+    <word>
+        <english>Blood</english>
+        <vietnamese>Máu</vietnamese>
+        <vietnamese>Huyết</vietnamese>
+        <vietnamese>Sự tàn sát</vietnamese>
+    </word>
+    <word>
+        <english>Change</english>
+        <vietnamese>Thay đổi</vietnamese>
+        <vietnamese>Biến đổi</vietnamese>
+    </word>
+    <word>
+        <english>Danger</english>
+        <vietnamese>Sự nguy hiểm</vietnamese>
+        <vietnamese>Nguy cơ</vietnamese>
+    </word>
+    <word>
+        <english>Determine</english>
+        <vietnamese>Xác định</vietnamese>
+        <vietnamese>Quyết định</vietnamese>
+    </word>
+    <word>
+        <english>Discuss</english>
+        <vietnamese>Thảo luận</vietnamese>
+        <vietnamese>Tranh luận</vietnamese>
+    </word>
+    <word>
+        <english>Element</english>
+        <vietnamese>Yếu tố</vietnamese>
+        <vietnamese>Nguyên tố</vietnamese>
+    </word>
+    <word>
+        <english>Experience</english>
+        <vietnamese>Kinh nghiệm</vietnamese>
+        <vietnamese>Nếm mùi</vietnamese>
+    </word>
+    <word>
+        <english>Famous</english>
+        <vietnamese>Nổi tiếng</vietnamese>
+    </word>
+    <word>
+        <english>Gather</english>
+        <vietnamese>Tập hợp</vietnamese>
+        <vietnamese>Tụ họp</vietnamese>
+        <vietnamese>Thu thập</vietnamese>
+    </word>
+    <word>
+        <english>Guess</english>
+        <vietnamese>Đoán</vietnamese>
+        <vietnamese>Sự phỏng đoán</vietnamese>
+    </word>
+    <word>
+        <english>Human</english>
+        <vietnamese>Con người</vietnamese>
+        <vietnamese>Loài người</vietnamese>
+    </word>
+    <word>
+        <english>Industry</english>
+        <vietnamese>Công nghiệp</vietnamese>
+        <vietnamese>Kỹ nghệ</vietnamese>
+    </word>
+    <word>
+        <english>Liquid</english>
+        <vietnamese>Chất lỏng</vietnamese>
+        <vietnamese>Du dương</vietnamese>
+        <vietnamese>Không vững</vietnamese>
+    </word>
+    <word>
+        <english>Lost</english>
+        <vietnamese>Thua</vietnamese>
+        <vietnamese>Mất</vietnamese>
+    </word>
+    <word>
+        <english>Match</english>
+        <vietnamese>Trận đấu</vietnamese>
+        <vietnamese>Đối thủ</vietnamese>
+    </word>
+    <word>
+        <english>Material </english>
+        <vietnamese>Vật liệu</vietnamese>
+        <vietnamese>Nguyên liệu</vietnamese>
+    </word>
+    <word>
+        <english>Modern</english>
+        <vietnamese>Hiện đại</vietnamese>
+        <vietnamese>Tân tiến</vietnamese>
+    </word>
+    <word>
+        <english>Hello</english>
+        <vietnamese>Xin chào</vietnamese>
+        <vietnamese>Chào</vietnamese>
+    </word>
+    <word>
+        <english>Hi</english>
+        <vietnamese>Xin chào</vietnamese>
+        <vietnamese>Chào</vietnamese>
+    </word>
+    <word>
+        <english>Goodbye</english>
+        <vietnamese>Tạm biệt</vietnamese>
+    </word>
+    <word>
+        <english>Hi</english>
+        <vietnamese>Xin chào</vietnamese>
+        <vietnamese>Chào</vietnamese>
+    </word>
+    <word>
+        <english>I</english>
+        <vietnamese>Tôi</vietnamese>
+        <vietnamese>Tớ</vietnamese>
+        <vietnamese>Mình</vietnamese>
+    </word>
+    <word>
+        <english>You</english>
+        <vietnamese>Bạn</vietnamese>
+        <vietnamese>Cậu</vietnamese>
+        <vietnamese>Các bạn</vietnamese>
+        <vietnamese>Các cậu</vietnamese>
+    </word>
+    <word>
+        <english>We</english>
+        <vietnamese>Chúng ta</vietnamese>
+        <vietnamese>Chúng tôi</vietnamese>
+        <vietnamese>Chúng tớ</vietnamese>
+    </word>
+    <word>
+        <english>He</english>
+        <vietnamese>Anh ấy</vietnamese>
+        <vietnamese>Cậu ấy</vietnamese>
+    </word>
+    <word>
+        <english>She</english>
+        <vietnamese>Cô ấy</vietnamese>
+        <vietnamese>Chị ấy</vietnamese>
+    </word>
+    <word>
+        <english>It</english>
+        <vietnamese>Nó</vietnamese>
+        <vietnamese>Cái</vietnamese>
+    </word>
+    <word>
+        <english>School</english>
+        <vietnamese>Trường học</vietnamese>
+    </word>
+    <word>
+        <english>University</english>
+        <vietnamese>Trường đại học</vietnamese>
+    </word>
+    <word>
+        <english>City</english>
+        <vietnamese>Thành phố</vietnamese>
+    </word>
+    <word>
+        <english>Flag</english>
+        <vietnamese>Lá cờ</vietnamese>
+    </word>
+    <word>
+        <english>Computer</english>
+        <vietnamese>Máy vi tính</vietnamese>
+    </word>
+    <word>
+        <english>Server</english>
+        <vietnamese>Máy chủ</vietnamese>
+        <vietnamese>Phụ vụ</vietnamese>
+    </word>
+    <word>
+        <english>Client</english>
+        <vietnamese>Máy khách</vietnamese>
+        <vietnamese>Khách hàng</vietnamese>
+    </word>
+    <word>
+        <english>Keyboard</english>
+        <vietnamese>Bàn phím</vietnamese>
+    </word>
+    <word>
+        <english>Mouse</english>
+        <vietnamese>Con chuột</vietnamese>
+    </word>
+    <word>
+        <english>Monitor</english>
+        <vietnamese>Màn hình</vietnamese>
+        <vietnamese>Lớp trưởng</vietnamese>
+    </word>
 </dictionary>
